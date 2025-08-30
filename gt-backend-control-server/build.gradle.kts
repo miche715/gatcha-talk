@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.sangseng"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.1"
 description = "gt-backend-control-server"
 
 java {
@@ -20,11 +20,13 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+    implementation("org.springframework.boot:spring-boot-starter")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 }
 
 kotlin {

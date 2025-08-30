@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: 'gt-backend-control-server'
