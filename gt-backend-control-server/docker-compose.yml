@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  mariadb:
+    image: mariadb:11.3
+    container_name: gatcha-talk-mariadb
+    environment:
+      MARIADB_ROOT_PASSWORD: rootroot
+      MARIADB_DATABASE: database
+      MARIADB_USER: root
+      MARIADB_PASSWORD: root
+    ports:
+      - "3306:3306"  # 호스트포트:컨테이너포트
+    volumes:
+      - ./data:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d
+
+volumes:
+  mariadb_data:
